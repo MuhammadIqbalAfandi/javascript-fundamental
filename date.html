@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Standard Library</title>
+  </head>
+  <body>
+    <script>
+      const date1 = new Date()
+      console.info(date1)
+
+      const date2 = new Date(1998, 03)
+      console.info(date2)
+
+      const date3 = new Date(1998, 03, 30, 23, 0, 0, 0)
+      console.info(date3)
+
+      const date4 = new Date(Date.now())
+      console.info(date4)
+
+      // Static method
+      const timestamp = Date.now()
+      console.info(timestamp)
+
+      // Instance method
+      const date = new Date()
+      date.setFullYear(1998)
+      console.info(date.getFullYear())
+      console.info(date.getMonth())
+      console.info(date.getDate())
+      console.info(date.getHours())
+      console.info(date.getMinutes())
+      console.info(date.getSeconds())
+      console.info(date.getMilliseconds())
+      console.info(date.getTimezoneOffset())
+    </script>
+  </body>
+</html>

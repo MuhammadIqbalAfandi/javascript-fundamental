@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Standard Library</title>
+  </head>
+  <body>
+    <script>
+      const animals = Array('cat', 'dog', 'bird', 'lion')
+      console.info(animals)
+
+      const names = ['Iqbal', 'Tina Huang', 'Joyce']
+      // Instance property
+      console.info(names.length)
+
+      // Instance method
+      names.forEach((val, index) => console.info(`index ${index}, value ${val}`))
+
+      names.push('Eko')
+      names.push('Hilman')
+      console.info(names.shift())
+      console.info(names.shift())
+      console.info(names)
+
+      names.push('Sandhika')
+      names.push('Brand')
+      console.info(names.pop())
+      console.info(names.pop())
+      console.info(names.pop())
+      console.info(names.pop())
+      console.info(names)
+    </script>
+  </body>
+</html>

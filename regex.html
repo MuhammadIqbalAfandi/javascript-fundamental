@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Standard Library</title>
+  </head>
+  <body>
+    <script>
+      console.info(/abc/)
+      console.info(new RegExp('abc'))
+      console.info(new RegExp(/abc/))
+
+      // Instance method
+      // const text = "Hi, do you know your abc's? The latest airplane designs evolved from slabcraft."
+      // const regexp = /abc/
+      // const regexp = /ABC/i
+      // const regexp = /ABC/gi
+
+      // const result1 = regexp.exec(text)
+      // console.info(result1)
+
+      // const result2 = regexp.test(text)
+      // console.info(result2)
+
+      // Special characters
+      // Assertions
+      const text = 'A quick fox'
+
+      const regexpFirstCharacter = /^A/
+      console.info(text.match(regexpFirstCharacter))
+
+      const regexpLastWorld = /\w+$/
+      console.info(text.match(regexpLastWorld))
+
+      const regexpWords = /\b\w+\b/g
+      console.info(text.match(regexpWords))
+
+      // Character classes
+      const chessStory = 'He played the King in a8 and she moved her Queen in c2.'
+
+      const regexpCoordinates = /\w\d/g
+      console.info(chessStory.match(regexpCoordinates))
+
+      // Groups and ranges
+      const aliceExcerpt = 'The Caterpillar and Alice looked at each other'
+      const regexpWithoutE = /\b[a-df-z]+\b/gi
+      console.info(aliceExcerpt.match(regexpWithoutE))
+
+      // Quantifiers
+      const ghostSpeak = 'booh booooooooooh'
+
+      const regexSpooky = /bo{3, }h/
+      console.info(ghostSpeak.match(regexSpooky))
+    </script>
+  </body>
+</html>

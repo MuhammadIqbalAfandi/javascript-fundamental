@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Standard Library</title>
+  </head>
+  <body>
+    <script>
+      const input = '123456'
+      const number = Number(input)
+
+      console.info(number)
+      console.info(typeof number)
+
+      // Static property
+      console.info(Number.MIN_SAFE_INTEGER)
+      console.info(Number.MAX_SAFE_INTEGER)
+
+      // Static method
+      console.info(Number.isInteger(input))
+      console.info(Number.isNaN(input))
+
+      // Instance method
+      // const value = Number('123456')
+      const value = 123456
+      console.info(value.toString())
+      console.info(value.toLocaleString('id-ID'))
+    </script>
+  </body>
+</html>
