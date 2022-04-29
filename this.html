@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Basic</title>
+  </head>
+  <body>
+    <script>
+      // Example 1
+      console.info(`global ${this}`)
+
+      function testThis() {
+        console.info(`function ${this}`)
+
+        function nestedTestThis() {
+          console.info(`nested function ${this}`)
+        }
+
+        nestedTestThis()
+      }
+
+      testThis()
+
+      // Example 2
+      const arrowTestThis = () => console.info(`arrow function ${this}`)
+      arrowTestThis()
+
+      // Example 3
+      const person = {
+        name: 'Iqbal',
+        sayHello: function () {
+          console.info(`object function ${this}`)
+        },
+      }
+
+      person.sayHello()
+
+      // Example 4
+      const person2 = {
+        name: 'Iqbal',
+        sayHello: () => console.info(`object arrow function ${this}`),
+      }
+
+      person2.sayHello()
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Basic</title>
+  </head>
+  <body>
+    <script>
+      const car = { make: 'Honda', model: 'Accord', year: 1998 }
+
+      console.info('year' in car)
+      console.info('price' in car)
+
+      const trees = ['redwood', 'bay', 'cedar', 'oak']
+      console.info(3 in trees)
+      console.info(4 in trees)
+
+      delete trees[3]
+      console.info(3 in trees)
+
+      delete car.year
+      console.info('year' in car)
+    </script>
+  </body>
+</html>

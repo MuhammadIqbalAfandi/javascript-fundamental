@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Basic</title>
+  </head>
+  <body>
+    <script>
+      // Example 1
+      // function* generatorSequent() {
+      //   yield 1
+      //   yield 2
+      //   yield 3
+      // }
+
+      // for (const val of generator) {
+      //   console.info(val)
+      // }
+
+      // Example 2
+      function* generatorSequent(value) {
+        for (let i = 0; i <= value; i++) {
+          yield i
+        }
+      }
+
+      const generator = generatorSequent(50)
+
+      console.info(generator.next().value)
+      console.info(generator.next().value)
+      console.info(generator.next().value)
+      console.info(generator.next().value)
+    </script>
+  </body>
+</html>

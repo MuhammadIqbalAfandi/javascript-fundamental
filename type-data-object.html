@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Basic</title>
+  </head>
+  <body>
+    <script>
+      const person = {}
+      const person2 = {
+        name: 'C',
+        gender: 'female',
+        age: 24,
+      }
+
+      person['name'] = 'Muhammad Iqbal Afandi'
+      person['gender'] = 'male'
+      person['age'] = 24
+      console.table(person)
+
+      console.table(person2)
+
+      delete person2.name
+      delete person2['age']
+      console.table(person2)
+
+      console.info(`Hello ${person.name} age ${person.age} gender ${person.gender}`)
+    </script>
+  </body>
+</html>

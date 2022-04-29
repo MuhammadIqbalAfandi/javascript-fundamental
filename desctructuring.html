@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Basic</title>
+  </head>
+  <body>
+    <script>
+      // Example 1
+      const number = [10, 20, 30, 40, 50]
+      const [a, b, ...rest] = number
+      console.info(a)
+      console.info(b)
+      console.info(rest)
+
+      //  Example 2
+      const person = {
+        firstName: 'Muhammad',
+        middleName: 'Iqbal',
+        lastName: 'Afandi',
+        address: {
+          street: 'JL. Pasar Hitam Sampali',
+          city: 'Medan',
+          country: 'Indonesia',
+        },
+      }
+
+      const {firstName, lastName, middleName, address: {street, city, country}} = person
+      console.info(`${firstName} ${lastName} ${middleName}`)
+      console.info(`${street}, ${city}, ${country}`)
+
+      // Example 3
+      function displayPerson({firstName, lastName, middleName}) {
+        console.info(`${firstName} ${lastName} ${middleName}`)
+      }
+
+      displayPerson(person)
+
+      // Example 4
+      function sum([first, second]) {
+          return first + second
+      }
+
+      console.info(sum(number))
+
+      // Example 5
+      const animals = {
+        herbivora: 'Pemakan tumbuhan',
+        karnivora: 'Pemakan daging',
+      }
+
+      const {herbivora, karnivora, omnivora = 'Pemakan segalanya'} = animals
+      console.info(herbivora)
+      console.info(karnivora)
+      console.info(omnivora)
+
+      // Example 6
+      const {firstName: namaDepan, middleName: namaTengah, lastName: namaBelakang} = person
+      console.info(`${namaDepan} ${namaTengah} ${namaBelakang}`)
+    </script>
+  </body>
+</html>

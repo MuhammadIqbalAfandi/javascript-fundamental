@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Basic</title>
+  </head>
+  <body>
+    <script>
+      // Example 1
+      function makeFunc() {
+        const name = 'Mozilla'
+
+        function displayName() {
+          console.info(name)
+        }
+
+        return displayName
+      }
+
+      const myFunc = makeFunc()
+      myFunc()
+
+      // Example 2
+      function makeAdder(value) {
+        const maker = 'Iqbal'
+
+        function add(param) {
+          console.info(`Maker: ${maker}`)
+          return value + param
+        }
+
+        return add()
+      }
+
+      const add = makeAdder(2)
+      console.info(add())
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Basic</title>
+  </head>
+  <body>
+    <script>
+      const empty = []
+      const names = ['Iqbal', 'Eko', 'Sandhika', 'Hilman', true, 24]
+      const multi = [['Iqbal', 'Eko'], [1, 2], [true, false], { name: 'Iqbal', age: 24 }]
+
+      console.table(names)
+      console.info(names[0])
+      console.info(names.length)
+
+      names[3] = 'Pukis'
+      console.table(names)
+
+      delete names[2]
+      console.table(names)
+
+      console.table(multi)
+    </script>
+  </body>
+</html>
