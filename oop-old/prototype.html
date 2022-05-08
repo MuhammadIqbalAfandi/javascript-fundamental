@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript OOP</title>
+  </head>
+  <body>
+    <script>
+      function Person(firstName, lastName, middleName) {
+        this.firstName = firstName
+        this.lastName = lastName
+        this.sayHello = function (name) {
+          console.info(`Hello ${name}, my name is ${firstName} ${lastName}`)
+        }
+      }
+
+      Person.prototype.sayBye = function () {
+        console.info('Good Bye')
+      }
+
+      Person.prototype.run = function () {
+        console.info(`${this.firstName} is running`)
+      }
+
+      const iqbal = new Person('Muhammad Iqbal', 'Afandi')
+      console.info(iqbal)
+      iqbal.sayHello('Hilman')
+      iqbal.sayBye()
+      iqbal.run()
+
+      const eko = new Person('Eko', 'Kurniawan')
+      console.info(eko)
+    </script>
+  </body>
+</html>
