@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Module</title>
+  </head>
+  <body>
+    <script type="module">
+      // import sayHello from './script/export-default.js'
+      // import author from './script/export-default.js'
+      // import { default as Person } from './script/export-default.js'
+      // import Manager from './script/export-default.js'
+      import author, { artistFavorite } from './script/export-default.js'
+
+      // sayHello('Tina Huang')
+      // console.info(author)
+
+      // const manager = new Manager('Tina Huang')
+      // manager.sayHello('Iqbal')
+
+      console.info(author)
+      console.info(artistFavorite)
+    </script>
+  </body>
+</html>
