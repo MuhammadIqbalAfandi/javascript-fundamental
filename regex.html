@@ -45,13 +45,14 @@
 
       // Groups and ranges
       const aliceExcerpt = 'The Caterpillar and Alice looked at each other'
+
       const regexpWithoutE = /\b[a-df-z]+\b/gi
       console.info(aliceExcerpt.match(regexpWithoutE))
 
       // Quantifiers
-      const ghostSpeak = 'booh booooooooooh'
+      const ghostSpeak = 'booh boooooooh'
 
-      const regexSpooky = /bo{3, }h/
+      const regexSpooky = /bo{3,}h/
       console.info(ghostSpeak.match(regexSpooky))
     </script>
   </body>
