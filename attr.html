@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript DOM</title>
+  </head>
+  <body>
+    <img id="image" src="https://picsum.photos/200/300" alt="Image 1" />
+    <img id="image2" src="" alt="Image 2" />
+
+    <script>
+      const image = document.getElementById('image')
+      const srcImage = image.getAttributeNode('src')
+
+      // Property
+      console.info(srcImage.name)
+      console.info(srcImage.value)
+
+      const srcImageWayTwo = image.getAttribute('src')
+      console.info(srcImageWayTwo)
+
+      // Create attribute
+      const image2 = document.getElementById('image2')
+      const srcImage2 = document.createAttribute('src')
+      srcImage2.value = 'https://picsum.photos/200/300'
+      image2.setAttributeNode(srcImage2)
+    </script>
+  </body>
+</html>

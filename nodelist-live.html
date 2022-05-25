@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript DOM</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li id="first">First</li>
+      <li id="second">Second</li>
+      <li id="third">Third</li>
+    </ul>
+
+    <script>
+      const menu = document.getElementById('menu')
+      const list = menu.childNodes
+
+      menu.append(document.createElement('li'))
+      menu.append(document.createElement('li'))
+
+      console.info(list)
+    </script>
+  </body>
+</html>

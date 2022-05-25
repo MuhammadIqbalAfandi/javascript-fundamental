@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript DOM</title>
+  </head>
+  <body>
+    <img id="image" src="https://picsum.photos/200/300" alt="Image 1" />
+
+    <script>
+      const image = document.getElementById('image')
+      const attributes = image.attributes
+
+      console.info(attributes)
+
+      for (let attribute of attributes) {
+        console.info(`${attribute.name} : ${attribute.value}`)
+      }
+    </script>
+  </body>
+</html>

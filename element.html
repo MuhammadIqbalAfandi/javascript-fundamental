@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript DOM</title>
+  </head>
+  <body>
+    <div id="content" class="content">
+      <h1 id="title" class="title">This is Title</h1>
+      <p id="description" class="description">This is Description</p>
+    </div>
+
+    <script>
+      const content = document.getElementById('content')
+      const description = document.getElementById('description')
+      const title = document.getElementById('title')
+
+      // Property
+      console.info(content.id)
+      console.info(content.className)
+      console.info(content.tagName)
+
+      // Method
+      description.remove()
+      title.remove()
+
+      // Create element
+      const title2 = document.createElement('h2')
+      title2.textContent = 'JavaScript DOM'
+      content.appendChild(title2)
+    </script>
+  </body>
+</html>

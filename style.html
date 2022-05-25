@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript DOM</title>
+  </head>
+  <body>
+    <button type="button" style="background-color: blue; color: white; border: none">Blue</button>
+    <button type="button" style="background-color: red; color: white; border: none">Red</button>
+    <button type="button" style="background-color: yellow; border: none">Yellow</button>
+
+    <div id="canvas" style="width: 500px; height: 500px; background-color: black"></div>
+
+    <script>
+      const canvas = document.getElementById('canvas')
+      const buttons = document.getElementsByTagName('button')
+
+      for (const button of buttons) {
+        button.addEventListener('click', () => {
+          canvas.style.backgroundColor = button.textContent.toLowerCase()
+        })
+      }
+    </script>
+  </body>
+</html>
