@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Async</title>
+  </head>
+  <body>
+    <form>
+      <label for="username">
+        Username :
+        <input type="text" id="username" name="username" />
+      </label>
+
+      <br />
+
+      <label for="name">
+        Name :
+        <input type="text" id="name" name="name" />
+      </label>
+
+      <br />
+
+      <label for="profile">
+        Profile:
+        <input type="file" name="profile" id="profile" />
+      </label>
+
+      <br />
+
+      <button id="btnRegister" type="button">Register</button>
+    </form>
+
+    <script>
+      const register = () => {
+        const form = new FormData()
+        form.append('username', document.getElementById('username').value)
+        form.append('name', document.getElementById('name').value)
+        form.append('profile', document.getElementById('profile').files.item(0))
+
+        const ajax = new XMLHttpRequest()
+        ajax.open('POST', `https://hookb.in/b93L31n8lZidyVDr9E1Y`)
+        ajax.addEventListener('load', () => {
+          if (ajax.status === 200) {
+            console.info(`Response success with status ${ajax.status} `)
+          } else {
+            console.info(`Response error with status ${ajax.status}`)
+          }
+        })
+        ajax.send(form)
+
+        console.info('This is async mode')
+      }
+
+      const btnRegister = document.getElementById('btnRegister')
+      btnRegister.addEventListener('click', register)
+    </script>
+  </body>
+</html>

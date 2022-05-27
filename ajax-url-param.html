@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Async</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="search" id="search" />
+      <button type="button" id="btnSearch">Search</button>
+    </form>
+
+    <script>
+      const search = () => {
+        const param = new URLSearchParams()
+        param.append('search', document.getElementById('search').value)
+
+        const ajax = new XMLHttpRequest()
+        ajax.open('GET', `https://hookb.in/b93L31n8lZidyVDr9E1Y?${param.toString()}`)
+        ajax.addEventListener('load', () => {
+          if (ajax.status === 200) {
+            console.info(`Response success with status ${ajax.status} `)
+          } else {
+            console.info(`Response error with status ${ajax.status}`)
+          }
+        })
+        ajax.send()
+
+        console.info('This is async mode')
+      }
+
+      const btnSearch = document.getElementById('btnSearch')
+      btnSearch.addEventListener('click', search)
+    </script>
+  </body>
+</html>

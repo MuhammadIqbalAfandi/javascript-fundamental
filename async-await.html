@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Async</title>
+  </head>
+  <body>
+    <script>
+      // Example 1
+      async function getNameAsync() {
+        return 'Iqbal'
+      }
+
+      const nameAsync = getNameAsync()
+      nameAsync.then((res) => console.info(res))
+
+      // Example 2
+      function getProduct() {
+        return fetch('api/product3.json', {
+          method: 'GET',
+        }).then((res) => res.json())
+      }
+
+      async function getProductName() {
+        try {
+          const response = await getProduct()
+          console.info(
+            `id: ${response.id} category: ${response.category} name: ${response.name} price: ${response.price}`
+          )
+        } catch (err) {
+          console.info(`Something wrong ${err}`)
+        }
+      }
+
+      getProductName()
+    </script>
+  </body>
+</html>

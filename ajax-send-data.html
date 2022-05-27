@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Async</title>
+  </head>
+  <body>
+    <form>
+      <label for="username">
+        Username :
+        <input type="text" id="username" name="username" />
+      </label>
+
+      <br />
+
+      <label for="password">
+        Password :
+        <input type="password" id="password" name="password" />
+      </label>
+
+      <br />
+
+      <button id="btnLogin" type="button">Login</button>
+    </form>
+
+    <script>
+      const login = () => {
+        const ajax = new XMLHttpRequest()
+        ajax.open('POST', 'https://hookb.in/b93L31n8lZidyVDr9E1Y')
+        ajax.addEventListener('load', () => {
+          if (ajax.status === 200) {
+            console.info(`Response success with status ${ajax.status} `)
+          } else {
+            console.info(`Response error with status ${ajax.status}`)
+          }
+        })
+        ajax.setRequestHeader('Content-Type', 'application/json')
+        ajax.send(
+          JSON.stringify({
+            username: document.getElementById('username').value,
+            password: document.getElementById('password').value,
+          })
+        )
+
+        console.info('This is async mode')
+      }
+
+      const btnLogin = document.getElementById('btnLogin')
+      btnLogin.addEventListener('click', login)
+    </script>
+  </body>
+</html>

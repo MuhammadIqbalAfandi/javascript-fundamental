@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Async</title>
+  </head>
+  <body>
+    <script>
+      const ajax = new XMLHttpRequest()
+      ajax.open('GET', 'api/product3.json')
+      ajax.addEventListener('load', () => {
+        if (ajax.status === 200) {
+          const json = JSON.parse(ajax.responseText)
+          console.info(`id: ${json.id} category: ${json.category} name: ${json.name} price: ${json.price}`)
+        } else {
+          console.info(`Response error with status ${ajax.status}`)
+        }
+      })
+      ajax.addEventListener('readystatechange', () => {
+        console.info(`Ready State Change ${ajax.readyState}`)
+      })
+      ajax.send()
+
+      console.info('This is async mode')
+    </script>
+  </body>
+</html>
