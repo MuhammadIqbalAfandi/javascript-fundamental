@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Basic</title>
+  </head>
+  <body>
+    <script>
+      function register(name, gender = 'UNKNOWN') {
+        return `Register successfully with name: ${name}, gender: ${gender}`
+      }
+
+      const register1 = register('Iqbal', 'Male')
+      console.info(register1)
+
+      const register2 = register('Tina')
+      console.info(register2)
+    </script>
+  </body>
+</html>
